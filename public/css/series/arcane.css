@@ -1,0 +1,26 @@
+.serie-hero {
+    background-image: url('../../imgs/series-imgs/arcane/fondo_arcane.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.vi{
+    background: url('../../imgs/series-imgs/arcane/characters/vi.webp');
+}
+
+.jinx{
+    background: url('../../imgs/series-imgs/arcane/characters/jinx.webp');
+}
+
+.jayce{
+    background: url('../../imgs/series-imgs/arcane/characters/jayce.webp');
+}
+
+.viktor{
+    background: url('../../imgs/series-imgs/arcane/characters/viktor.webp');
+}
+
+.personaje-card{
+    background-size: cover;
+    background-position: center;
+}

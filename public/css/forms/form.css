@@ -1,0 +1,137 @@
+body {
+    background-color: #000;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    position: relative;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../../imgs/home/fondo.webp");
+    background-position: center;
+    background-size: contain;
+    filter: blur(4px);
+}
+
+.box {
+    margin-top: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginbx {
+    background: rgba(55, 55, 55, 0.58);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 0 25px rgba(1,1,1,1.5);
+    color: white;
+}
+
+/* Título */
+.loginbx h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+    opacity: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 18px;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+input:disabled{
+    background-color: aliceblue;
+}
+
+input:focus, select:focus {
+    box-shadow: 0 0 10px #00c6ff;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #00c6ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0072ff;
+    transform: translateY(-2px);
+}
+
+.modal-content {
+    background: rgba(20, 20, 30, 0.95);
+    color: white;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    animation: aparecerModal 0.4s ease;
+}
+
+.modal-content h4 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #00ffcc;
+}
+
+.modal-content p {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.modal-content .btn-primary {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    transition: 0.3s;
+}
+
+.modal-content .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 114, 255, 0.7);
+}
+
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.8);
+}

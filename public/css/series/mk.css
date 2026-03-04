@@ -1,0 +1,27 @@
+.serie-hero {
+    background-image: url('../../imgs/series-imgs/mk/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+}
+
+.steven{
+    background: url('../../imgs/series-imgs/mk/characters/steven.jpeg');
+}
+
+.layla{
+    background: url('../../imgs/series-imgs/mk/characters/layla.webp');
+}
+
+.arthur{
+    background: url('../../imgs/series-imgs/mk/characters/arthur.webp');
+}
+
+.khonshu{
+    background: url('../../imgs/series-imgs/mk/characters/khonshu.webp');
+}
+
+.personaje-card{
+    background-size: cover;
+    background-position: center;
+}

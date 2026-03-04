@@ -1,0 +1,31 @@
+.serie-hero {
+    background-image: url('../../imgs/series-imgs/hotd/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1.9);
+}
+
+.rhaenyra{
+    background: url('../../imgs/series-imgs/hotd/characters/rhaenyra.jpg');
+}
+
+.daemon{
+    background: url('../../imgs/series-imgs/hotd/characters/daemon.webp');
+}
+
+.alicent{
+    background: url('../../imgs/series-imgs/hotd/characters/alicent.jpg');
+}
+
+.viserys{
+    background: url('../../imgs/series-imgs/hotd/characters/viserys.webp');
+}
+
+.personaje-card{
+    background-size: cover;
+    background-position: center;
+}
+
+.alicent{
+    background-position: top;
+}

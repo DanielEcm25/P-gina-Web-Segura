@@ -1,0 +1,27 @@
+.serie-hero {
+    background-image: url('../../imgs/series-imgs/tlou/fondo.jpeg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1.9);
+}
+
+.joel{
+    background: url('../../imgs/series-imgs/tlou/characters/joel.webp');
+}
+
+.ellie{
+    background: url('../../imgs/series-imgs/tlou/characters/ellie.webp');
+}
+
+.tess{
+    background: url('../../imgs/series-imgs/tlou/characters/tess.webp');
+}
+
+.abby{
+    background: url('../../imgs/series-imgs/tlou/characters/abby.jpeg');
+}
+
+.personaje-card{
+    background-size: cover;
+    background-position: center;
+}

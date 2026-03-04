@@ -1,0 +1,27 @@
+.serie-hero {
+    background-image: url('../../imgs/series-imgs/chernobyl/fondo.png');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.87);
+}
+
+.valery{
+    background: url('../../imgs/series-imgs/chernobyl/characters/valery.jpg');
+}
+
+.boris{
+    background: url('../../imgs/series-imgs/chernobyl/characters/boris.webp');
+}
+
+.ulana{
+    background: url('../../imgs/series-imgs/chernobyl/characters/ulana.jpg');
+}
+
+.anatoly{
+    background: url('../../imgs/series-imgs/chernobyl/characters/anatoly.jpg');
+}
+
+.personaje-card{
+    background-size: cover;
+    background-position: center;
+}

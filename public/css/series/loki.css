@@ -1,0 +1,27 @@
+.serie-hero {
+    background-image: url('../../imgs/series-imgs/loki/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1.9);
+}
+
+.loki{
+    background: url('../../imgs/series-imgs/loki/characters/loki.webp');
+}
+
+.sylvie{
+    background: url('../../imgs/series-imgs/loki/characters/sylvie.jpeg');
+}
+
+.mobius{
+    background: url('../../imgs/series-imgs/loki/characters/mobius.webp');
+}
+
+.kang{
+    background: url('../../imgs/series-imgs/loki/characters/kang.jpg');
+}
+
+.personaje-card{
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,27 @@
+.serie-hero {
+    background-image: url('../../imgs/series-imgs/b_bad/fondo.webp');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1.9);
+}
+
+.walter{
+    background: url('../../imgs/series-imgs/b_bad/characters/walter.webp');
+}
+
+.jesse{
+    background: url('../../imgs/series-imgs/b_bad/characters/jesse.webp');
+}
+
+.skyler{
+    background: url('../../imgs/series-imgs/b_bad/characters/skyler.webp');
+}
+
+.fring{
+    background: url('../../imgs/series-imgs/b_bad/characters/fring.jpg');
+}
+
+.personaje-card{
+    background-size: cover;
+    background-position: center;
+}

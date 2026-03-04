@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;   
+}
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../../imgs/main/login/fondo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+main {
+    background: rgba(235, 235, 225, 0.81);
+    width: 400px;
+    padding: 40px 35px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: aparecer 0.8s ease forwards;
+}
+
+
+.logo {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px auto;
+    background-image: url('../../imgs/main/login/logo.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20%;
+}
+
+
+h1 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #000062;
+}
+
+.form-register {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form-register label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    color: #221;
+}
+
+
+.form-register input[type="email"],
+.form-register input[type="password"] {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: 0.3s ease;
+}
+
+
+.form-register input:focus {
+    border-color: #000062;
+    box-shadow: 0 0 0 3px rgba(0, 0, 98, 0.2);
+    outline: none;
+}
+
+
+.enviar {
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: #000062;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background: #0000a3;
+    transform: translateY(-2px);
+}
+
+
+#register {
+    display: inline-block;
+    margin-top: 10px;
+    color: #000062;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#register:hover {
+    text-decoration: underline;
+}
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

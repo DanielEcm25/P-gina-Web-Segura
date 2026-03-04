@@ -1,0 +1,26 @@
+.serie-hero {
+    background-image: url('../../imgs/series-imgs/got/fondo_got.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.jon-snow{
+    background: url('../../imgs/series-imgs/got/characters/jon-snow.webp');
+}
+
+.daenerys{
+    background: url('../../imgs/series-imgs/got/characters/daenerys.webp');
+}
+
+.tyrion{
+    background: url('../../imgs/series-imgs/got/characters/tyrion.webp');
+}
+
+.bran-stark{
+    background: url('../../imgs/series-imgs/got/characters/bran-stark.webp');
+}
+
+.personaje-card{
+    background-size: cover;
+    background-position: center;
+}

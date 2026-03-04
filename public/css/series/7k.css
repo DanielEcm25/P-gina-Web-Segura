@@ -1,0 +1,27 @@
+.serie-hero {
+    background-image: url('../../imgs/series-imgs/7k/fondo.webp');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.87);
+}
+
+.dunk{
+    background: url('../../imgs/series-imgs/7k/characters/dunk.jpg');
+}
+
+.egg{
+    background: url('../../imgs/series-imgs/7k/characters/egg.webp');
+}
+
+.aeryon{
+    background: url('../../imgs/series-imgs/7k/characters/aeryon.webp');
+}
+
+.baelor{
+    background: url('../../imgs/series-imgs/7k/characters/baelor.jpeg');
+}
+
+.personaje-card{
+    background-size: cover;
+    background-position: center;
+}

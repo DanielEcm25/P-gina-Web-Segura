@@ -1,0 +1,27 @@
+.serie-hero {
+    background-image: url('../../imgs/series-imgs/ST/st_background.jpg');
+    background-size: cover;
+    background-position: 20px;
+    filter: brightness(2);
+}
+
+.once{
+    background: url('../../imgs/series-imgs/ST/characters/once.webp');
+}
+
+.mike{
+    background: url('../../imgs/series-imgs/ST/characters/mike.webp');
+}
+
+.dustin{
+    background: url('../../imgs/series-imgs/ST/characters/dustin.jpg');
+}
+
+.hopper{
+    background: url('../../imgs/series-imgs/ST/characters/hopper.webp');
+}
+
+.personaje-card{
+    background-size: cover;
+    background-position: center;
+}
