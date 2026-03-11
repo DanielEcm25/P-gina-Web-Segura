@@ -1,3 +1,6 @@
+
+
+
 {{ $post->title }}
 
 {!! $post->content !!}

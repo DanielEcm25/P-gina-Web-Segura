@@ -42,3 +42,8 @@ Route::post('/login',[LoginController::class,'store'])
 
 #Vista logout
 Route::post('/logout',[LoginController::class,'destroy'])->name('logout');
+
+#Rutas post
+Route::middleware(['', ''])->group(function () {
+
+});

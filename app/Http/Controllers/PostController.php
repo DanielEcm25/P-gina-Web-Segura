@@ -18,7 +18,7 @@ class PostController extends Controller
         ->latest()
         ->paginate(10);
 
-        return view('posts.index'.compact('posts'));
+        return view('posts.index',compact('posts'));
     }
 
     /**
@@ -36,7 +36,7 @@ class PostController extends Controller
     {
         $data = $request->validate([
             'title' => 'required|string|max:150',
-            'slug' => 'required|string|max:150|unique:posts.slug',
+            'slug' => 'required|string|max:150|unique:posts,slug',
             'content' => 'required|string',
             'status' => 'required|in:draft,published'
         ]);
@@ -73,6 +73,6 @@ class PostController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        
     }
 }
