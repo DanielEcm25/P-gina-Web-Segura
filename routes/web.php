@@ -44,6 +44,6 @@ Route::post('/login',[LoginController::class,'store'])
 Route::post('/logout',[LoginController::class,'destroy'])->name('logout');
 
 #Rutas post
-Route::middleware(['', ''])->group(function () {
-
+Route::middleware(['auth'])->group(function () {
+    Route::resource('post', PostController::class);
 });
