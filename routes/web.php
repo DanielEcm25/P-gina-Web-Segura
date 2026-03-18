@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\PostController;
 
 # Vista principal
 Route::get('/', function () {
@@ -44,6 +45,6 @@ Route::post('/login',[LoginController::class,'store'])
 Route::post('/logout',[LoginController::class,'destroy'])->name('logout');
 
 #Rutas post
-Route::middleware(['auth'])->group(function () {
-    Route::resource('post', PostController::class);
+Route::middleware('auth')->group(function () {
+    Route::resource('posts', PostController::class);
 });

@@ -9,8 +9,8 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark px-3">
-        <a class="navbar-brand" href="{{ route('dashboard') }}">Dashboard</a>
-        <a href="{{ route('post.index') }}">Posts</a>
+        <a class="navbar-brand" href="{{ route('dashboard.ir','top-10') }}">Dashboard</a>
+        <a href="{{ route('posts.index') }}">Posts</a>
     </nav>
     <form action="{{ route('logout') }}" method="POST">
         <button>Cerrar Sesión</button>

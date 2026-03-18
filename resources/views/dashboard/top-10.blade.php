@@ -23,6 +23,9 @@
                 <a href="{{route('formularios.ir','form-visita')}}" class="btn btn-outline-light">
                 Comparte tu serie favorita
                 </a>
+                <a href="{{route('posts.index')}}" class="btn btn-outline-light">
+                Gestión de Posts
+                </a>
                 <form action="{{ route('logout') }}" method="POST" class="d-inline">
                     @csrf
                     <button type="submit" class="btn btn-outline-light">

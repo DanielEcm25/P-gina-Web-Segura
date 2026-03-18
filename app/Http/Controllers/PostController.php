@@ -1,90 +1,62 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Models\Post;
-
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    use AuthorizesRequests;
     public function index()
     {
-        $posts = auth()->user()
-        ->posts()
-        ->latest()
-        ->paginate(10);
-
-        return view('posts.index',compact('posts'));
+        $posts = auth()->user()->posts()->latest()->paginate(10);
+        return view('posts.index', compact('posts'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        return view('post.create');
+        return view('posts.create');
     }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $data = $request->validate([
             'title' => 'required|string|max:150',
-            'slug' => 'required|string|max:150|unique:posts,slug',
+            'slug'  => 'required|string|max:150|unique:posts,slug',
             'content' => 'required|string',
             'status' => 'required|in:draft,published'
         ]);
+        if (empty($data['slug']))
+            $data['slug'] = Str::slug($data['title']);
         auth()->user()->posts()->create($data);
-        return redirect()->route('post.index');
+        return redirect()->route('posts.index')->with('ok','Creada.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function show(Post $post)
     {
-        $this->authorize('view',$post);
-        return view('posts.show',compact('post'));
+        $this->authorize('view', $post);  return view('posts.show', compact('post'));
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function edit(Post $post)
     {
-        $this->authorize('update',compact('post'));
+        $this->authorize('update', $post);  
+        return view('posts.edit', compact('post'));
     }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Post $post)
     {
-        $this->authorize('update',$post);
+        $this->authorize('update', $post);
         $data = $request->validate([
-            'slug' => 'nullable|string|max:150|unique:post,slug,'.$post->id,
-            'title' => 'required|string|max:150'.$post->id,
-            'content' => 'required|string'.$post->id,
-            'status' => 'required|in:draft,published'.$post->id,
+            'title' => 'required|string|max:150',
+            'slug' => 'nullable|string|max:150|unique:posts,slug,'.$post->id,
+            'content' => 'required|string',
+            'status' => 'required|in:draft,published'
         ]);
-        if(empty($data['slug'])) $data['slug'] = Str::slug($data['title']);
+        if (empty($data['slug'])) $data['slug'] = Str::slug($data['title']);
         $post->update($data);
-        return redirect()->route('post.index')->with('ok','Actualizado.');
+        return redirect()->route('posts.index')->with('ok','Actualizada.');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function destroy(Post $post)
     {
-        $this->authorize('delete',$post);
-        $post->delete();
-        return redirect()->route('post.index')->with('ok','Eliminado.');
+        $this->authorize('delete', $post);  $post->delete();
+        return redirect()->route('posts.index')->with('ok','Eliminada.');
     }
 }
