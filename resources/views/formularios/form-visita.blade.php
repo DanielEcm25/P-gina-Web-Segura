@@ -20,7 +20,7 @@
                 class="me-2 logo_udec">
             </a>
             <h2 class="author">Bienvenido/a al formulario, {{ auth()->user()->name??'Usuario'}} {{ auth()->user()->last_name??'Usuario'}}</h2>
-            <a href="{{route('dashboard.ir','top-10')}}" class="btn btn-outline-light">
+            <a href="{{route('dashboard.ir','main_sight')}}" class="btn btn-outline-light">
                 Volver
             </a>
         </div>

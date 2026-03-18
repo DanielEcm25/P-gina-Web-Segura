@@ -3,15 +3,15 @@
     <div class="container">
         <h1>Gestión de Publicaciones</h1>
         <a href="{{ route('posts.create') }}">Crear Publicación</a>
+        <hr>
         @if(session('ok'))
             <p>{{ session('ok') }}</p>
         @endif
-        <hr>
-            <table class="tabla">
+            <table class="Tabla">
                 <thead>
-                    <tr>
+                    <tr style="width: 12px">
                         <th>ID</th>
-                        <th>Título</tr>
+                        <th>Título</th>
                         <th>Estado</th>
                         <th>Slug</th>
                         <th>Acciones</th>
@@ -24,11 +24,11 @@
                             <td>{{ $post->title }}</td>
                             <td>{{ $post->status }}</td>
                             <td>{{ $post->slug }}</td>
-                            <td class="d.flex gap-2">
+                            <td class="d-flex gap-2">
                                 <a href="{{ route('posts.show',$post->id) }}">Ver</a>
                                 <a href="{{ route('posts.edit',$post->id) }}">Editar</a>
                                 <form method="POST" action="{{ route('posts.destroy',$post->id) }}">
-                                @csrf
+                                    @csrf
                                     @method('DELETE')
                                     <button class="btn btn-del" type="submit" onclick="return confirm('¿Eliminar?')">
                                         Eliminar

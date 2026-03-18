@@ -9,12 +9,13 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark px-3">
-        <a class="navbar-brand" href="{{ route('dashboard.ir','top-10') }}">Dashboard</a>
-        <a href="{{ route('posts.index') }}">Posts</a>
-    </nav>
+        <a class="navbar-brand" href="{{ route('dashboard.ir','main_sight') }}">Dashboard</a>
+        <a href="{{ route('dashboard.ir','main_sight') }}">Vista Principal</a>
     <form action="{{ route('logout') }}" method="POST">
+        @csrf
         <button>Cerrar Sesión</button>
     </form>
+    </nav>
     <main class="py-4">
         @yield('content')
     </main>

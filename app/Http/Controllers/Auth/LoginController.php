@@ -22,7 +22,7 @@ class LoginController extends Controller
             ]);
         }
         $request->session()->regenerate();
-        return redirect()->route('dashboard.ir','top-10');
+        return redirect()->route('dashboard.ir','main_sight');
     }
 
     public function destroy(Request $request){

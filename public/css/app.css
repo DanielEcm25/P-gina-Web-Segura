@@ -55,7 +55,7 @@ h1 {
 }
 
 .btn-success:hover, .btn-login:hover{
-    transform: scale(1.08);
+    transform: scale(1.06);
     background-color: #1bdb82;
     color: #323432;
 }

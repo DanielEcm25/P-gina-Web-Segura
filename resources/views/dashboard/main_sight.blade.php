@@ -5,7 +5,7 @@
     <meta author="Daniel Esteban Contreras Motoa">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{{ asset('icons/favicon.ico') }}">
-    <title>Top 10 Mejores Series</title>
+    <title>Top Mejores Series del Momento</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 </head>
@@ -18,7 +18,7 @@
                 width="50"
                 class="me-2 logo_udec">
             </a>
-            <h2 class="author">Bienvenido/a al panel, {{ auth()->user()->name??'Usuario'}} {{ auth()->user()->last_name??'Usuario'}}</h2>
+            <h2 class="author">Bienvenido/a a la vista principal, {{ auth()->user()->name??'Usuario'}} {{ auth()->user()->last_name??'Usuario'}}</h2>
             <div class="d-flex gap-3">
                 <a href="{{route('formularios.ir','form-visita')}}" class="btn btn-outline-light">
                 Comparte tu serie favorita
@@ -37,7 +37,7 @@
     </nav>
 
     <div class="main-container mt-5">
-        <h1 class="text-center mb-4">Mis 10 Series Favoritas</h1>
+        <h1 class="text-center mb-4">Mis Series Favoritas</h1>
         <div class="row g-4 justify-content-center">
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="card got" style="width: 22rem;">
@@ -164,7 +164,7 @@
     <footer class="footer mt-5">
         <div class="container text-center">
 
-            <h5 class="mb-3">Top 10 Mejores Series (Opinion personal)</h5>
+            <h5 class="mb-3">Top Mejores Series (Opinion personal)</h5>
 
             <p class="mb-1">
                 Elaborado por: <strong>Daniel Esteban Contreras Motoa</strong> - Universidad de Cundinamarca

@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <h1>Nueva Publicación</h1>
-    <form action="{{ route(post.store) }}" method="POST">
+    <form action="{{ route('posts.store') }}" method="POST">
         @csrf
         <div>
             <label for="title">Título</label>
