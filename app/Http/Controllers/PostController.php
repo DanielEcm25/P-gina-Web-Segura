@@ -26,7 +26,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('post.create');
     }
 
     /**
@@ -49,7 +49,8 @@ class PostController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $this->authorize('view',$post);
+        return view('posts.show',compact('post'));
     }
 
     /**
@@ -57,7 +58,7 @@ class PostController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $this->authorize('update',compact('post'));
     }
 
     /**
@@ -66,6 +67,15 @@ class PostController extends Controller
     public function update(Request $request, string $id)
     {
         $this->authorize('update',$post);
+        $data = $request->validate([
+            'slug' => 'nullable|string|max:150|unique:post,slug,'.$post->id,
+            'title' => 'required|string|max:150'.$post->id,
+            'content' => 'required|string'.$post->id,
+            'status' => 'required|in:draft,published'.$post->id,
+        ]);
+        if(empty($data['slug'])) $data['slug'] = Str::slug($data['title']);
+        $post->update($data);
+        return redirect()->route('post.index')->with('ok','Actualizado.');
     }
 
     /**
@@ -73,6 +83,8 @@ class PostController extends Controller
      */
     public function destroy(string $id)
     {
-        
+        $this->authorize('delete',$post);
+        $post->delete();
+        return redirect()->route('post.index')->with('ok','Eliminado.');
     }
 }
