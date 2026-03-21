@@ -1,8 +1,7 @@
 @extends ('layouts.app')
 @section('content')
     <div class="container">
-        <h1>Gestión de Publicaciones</h1>
-        <a href="{{ route('posts.create') }}">Crear Publicación</a>
+        <a class="btn btn-outline-light" href="{{ route('posts.create') }}">Crear Publicación</a>
         <hr>
         @if(session('ok'))
             <p>{{ session('ok') }}</p>
@@ -19,19 +18,23 @@
                 </thead>
                 <tbody>
                     @forelse ($posts as $post)
-                        <tr>
+                        <tr class="row-items">
                             <td>{{ $post->id }}</td>
                             <td>{{ $post->title }}</td>
                             <td>{{ $post->status }}</td>
                             <td>{{ $post->slug }}</td>
-                            <td class="d-flex gap-2">
-                                <a href="{{ route('posts.show',$post->id) }}">Ver</a>
-                                <a href="{{ route('posts.edit',$post->id) }}">Editar</a>
+                            <td class="d-flex gap-2 acciones">
+                                <a href="{{ route('posts.show',$post->id) }}" title="Ver" class="btn-accion ver">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                                <a href="{{ route('posts.edit',$post->id) }}" title="Editar" class="btn-accion editar">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
                                 <form method="POST" action="{{ route('posts.destroy',$post->id) }}">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-del" type="submit" onclick="return confirm('¿Eliminar?')">
-                                        Eliminar
+                                    <button class="btn-accion eliminar" type="submit" onclick="return confirm('¿Eliminar?')" title="Eliminar">
+                                        <i class="bi bi-trash"></i>
                                     </button>
                                 </form>
                             </td>

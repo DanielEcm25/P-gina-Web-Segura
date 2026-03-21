@@ -16,6 +16,16 @@ Route::get('/dashboard/{nombre}', function ($nombre){
 })->middleware('auth')
 ->name('dashboard.ir');
 
+# Ruta para el dashboard, hay que hacer el dashboard
+// Route::get('/dashboard/dashboard',function(){
+//     $posts = Post::latest()->take(5)->get();
+//     return view('dashboard.dashboard',compact('posts'));
+// });
+Route::get('/dashboard/dashboard', function () {
+    return view("dashboard.dashboard");
+})->name('dashboard.go');
+
+
 # Vistas series (con nombre => serie)
 Route::get('/series/{nombre}', function ($nombre) {
     return view("series.$nombre");

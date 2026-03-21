@@ -19,12 +19,15 @@
                 class="me-2 logo_udec">
             </a>
             <h2 class="author">Bienvenido/a a la vista principal, {{ auth()->user()->name??'Usuario'}} {{ auth()->user()->last_name??'Usuario'}}</h2>
-            <div class="d-flex gap-3">
+            <div class="d-flex cajanav">
                 <a href="{{route('formularios.ir','form-visita')}}" class="btn btn-outline-light">
                 Comparte tu serie favorita
                 </a>
                 <a href="{{route('posts.index')}}" class="btn btn-outline-light">
                 Gestión de Posts
+                </a>
+                <a href="{{route('dashboard.go')}}" class="btn btn-outline-light">
+                Volver a Dashboard
                 </a>
                 <form action="{{ route('logout') }}" method="POST" class="d-inline">
                     @csrf
@@ -50,7 +53,6 @@
                 </div>
             </div>
 
-
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="card arcane" style="width: 22rem;">
                     <div class="card-body text-center">
@@ -61,7 +63,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="card ST" style="width: 22rem;">
@@ -74,7 +75,6 @@
                 </div>
             </div>
 
-
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="card HOTD" style="width: 22rem;">
                     <div class="card-body text-center">
@@ -85,7 +85,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="card LOKI" style="width: 22rem;">
@@ -98,7 +97,6 @@
                 </div>
             </div>
 
-
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="card TLOU" style="width: 22rem;">
                     <div class="card-body text-center">
@@ -109,7 +107,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="card Br_Bad" style="width: 22rem;">
@@ -122,7 +119,6 @@
                 </div>
             </div>
 
-
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="card MK" style="width: 22rem;">
                     <div class="card-body text-center">
@@ -133,7 +129,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="card chernobyl" style="width: 22rem;">
@@ -146,7 +141,6 @@
                 </div>
             </div>
 
-
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="card k7" style="width: 22rem;">
                     <div class="card-body text-center">
@@ -157,7 +151,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     

@@ -22,7 +22,7 @@ class LoginController extends Controller
             ]);
         }
         $request->session()->regenerate();
-        return redirect()->route('dashboard.ir','main_sight');
+        return redirect()->route('dashboard.go');
     }
 
     public function destroy(Request $request){
