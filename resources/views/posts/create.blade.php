@@ -1,4 +1,5 @@
 @extends ('layouts.app')
+@section('page','crear publicación')
 @section('content')
     <div class="container form-container">
         <h1 class="form-title">Nueva Publicación</h1>

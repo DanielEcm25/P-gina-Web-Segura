@@ -1,4 +1,5 @@
 @extends ('layouts.app')
+@section('page','gestión de publicaciones')
 @section('content')
     <div class="container">
         <a class="btn btn-outline-light" href="{{ route('posts.create') }}">Crear Publicación</a>

@@ -4,6 +4,8 @@ body {
     min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
+    animation: aparecer 0.7s ease forwards;
+    background-color: #010203;
 }
 
 .navbar {
@@ -293,7 +295,9 @@ th:last-child,tr td:last-child{
     transform: scale(1.05);
 }
 
-.form-container{
+/*   Estilos a la página de crear publicación */
+
+.form-container {
     max-width: 80%;
     margin: 40px auto;
     background-color: #243a42;
@@ -373,9 +377,71 @@ th:last-child,tr td:last-child{
 .back{
     text-decoration: none;
     text-align: center;
+    align-self: center;
 }
 
 .btn-submit:hover{
     background-color: #5fb2e6;
     transform: scale(1.02);
+}
+
+
+/*    Estilos a la parte de show post*/
+.post-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    border: 0.8px solid #f2f4f5;
+}
+.first-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+}
+.titulo-post {
+    font-size: 3em;
+    font-weight: bold;
+    color: #e6f2f5;
+    margin: 0;
+    margin-bottom: 25px;
+    display: inline;
+}
+.slug-post {
+    font-size: 1.5em;
+    color: #8aaeb5;
+    margin-bottom: 25px;
+}
+
+.contenido-post {
+    background-color: #3c5b66;
+    padding: 20px;
+    border-radius: 10px;
+    color: #d9ecef;
+    line-height: 1.7;
+    font-size: 1.3em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    margin-bottom: 25px;
+}
+
+.volver-index{
+    margin: 0;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0.10;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
